@@ -13,7 +13,6 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-const db = firebase.database();
 
 //invokes firebase authentication.
 const auth = firebase.auth();
@@ -35,10 +34,6 @@ const authenticate = (email, password) => {
         .auth()
         .signInWithEmailAndPassword(email, password).
     then(() => {
-        db.collection("users").doc(userCredential.user.uid).set({
-            email: email,
-            password: password
-          })
         
             window.location.replace("Home.html");
         })

@@ -39,6 +39,7 @@ const register = () => {
             alert.onClose(showLogin);
         });
 
+        alert.warning("Now Sign In To Continue");
     const signIn = () => window.location.replace("signup.html");
 };
 
