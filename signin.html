@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SignIn/SignUp</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/sign.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="https://img.icons8.com/color/48/000000/login-rounded-right.png" />
+</head>
+
+<body>
+
+    <div class="title1">
+        <h1 class="title1 animate__animated animate__fadeInDownBig">Login In</h1>
+        <br>
+
+    </div>
+
+    <div class="forms-out">
+        <div class="forms-in animate__animated animate__bounceIn">
+            <div id="registration-page" class="hide">
+                <button id="show-login">Already Got An Account? Sign In Here</button>
+                <h3>Enter Your Email, And A Link To Create Your Password Will Be Sent To You</h3>
+                <h3>Sign Up</h3>
+                Email
+                <span class="tooltip"
+                    data-tooltip="Enter Your Email, And A Link To Create Your Password Will Be Sent To You">?</span>
+
+                <input type="email" id="r-email" required /><br />
+                Password
+                <br>
+                <input type="password" id="r-password" autocomplete="email" required /><br />
+                <br>
+                <button id="register">Sign Up</button>
+                <br>
+                <button onclick="location.href='/index.html'">Home</button>
+
+            </div>
+
+            <div id="login-page">
+                <button id="show-register">New? Click Me To Sign Up</button>
+                <h3>
+                    Sign In With Your Username And Password To Get Started</h3>
+                Email
+                <span class="tooltip2" data-tooltip="Enter Email And Password">?</span>
+                <br>
+                <input type="email" id="login-email" /><br>
+                Password
+                <br>
+                <input type="password" id="login-password" /><br>
+                <button type="checkbox" onclick="myFunction()">Show Password</button>
+                <br>
+                <button id="login">Sign In</button>
+                <br>
+                <button id="forgot-password">Forgot Password? Click Me To Reset</button>
+                <br>
+                <button onclick="location.href='/index.html'">Home</button>
+            </div>
+
+            <div id="homepage" class="hide">
+                <button id="signout">Sign Out</button>
+                <h3>Logged In</h3>
+                <br>
+                <button onclick="location.href='/index.html'">Home</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
+    <script src="/js/alert.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/sign.js"></script>
+</body>
+
+</html>
